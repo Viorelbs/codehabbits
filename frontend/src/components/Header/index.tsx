@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import MenuLinks from "../MenuLinks";
 import Logo from "../Logo";
 import styles from "./index.module.scss";
