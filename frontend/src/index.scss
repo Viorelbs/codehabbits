@@ -55,3 +55,17 @@ body {
   width: 95vw;
   max-width: 1900px;
 }
+/* Custom scrollbar  */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border: 3px solid #021174;
+  border-radius: 5px;
+}
+
