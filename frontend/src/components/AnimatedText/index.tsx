@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import styles from "./index.module.scss";
 
 interface AnimatedTextCharacterProps {
   text: string;
@@ -42,7 +41,9 @@ export default function AnimatedTextCharacter(
 
   return (
     <motion.div
-      className={`${styles.wrapper}`}
+      className={`overflow-hidden flex flex-wrap justify-center ${
+        props.variant ?? "regular"
+      }`}
       variants={container}
       initial="hidden"
       animate="visible"
