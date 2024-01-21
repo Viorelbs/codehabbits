@@ -1,8 +1,7 @@
 import React from "react";
-import { Loader } from "../Loader";
-import styles from "./index.module.scss";
+import Loader from "../Loader";
 
-interface ButtonPrimaryProps {
+interface Props {
   text: string;
   className?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -10,19 +9,17 @@ interface ButtonPrimaryProps {
   disabled?: boolean;
   loading?: boolean;
 }
-export default function BtnPrimary(props: Readonly<ButtonPrimaryProps>) {
-  if (props.loading) {
-    return <Loader size={4} />;
-  }
-
+export default function BtnPrimary(props: Readonly<Props>) {
   return (
     <button
       disabled={props.disabled}
       type={props.type ?? "button"}
       onClick={props.onClick}
-      className={`${styles.button} ${props.className}`}
+      className={` bg-orange-700 hover:bg-orange-800 rounded-md py-2 px-6 text-white font-medium	${
+        props.className ?? ""
+      }`}
     >
-      {props.text}
+      {props.loading ? <Loader size={6} /> : props.text}
     </button>
   );
 }
