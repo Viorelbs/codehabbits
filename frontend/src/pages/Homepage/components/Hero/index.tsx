@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import AnimatedTextCharacter from "../../../../components/AnimatedText";
 import BtnPrimary from "../../../../components/ButtonPrimary";
-import styles from "./index.module.scss";
 
 export default function Hero() {
   return (
-    <div className={styles.outerWrapper}>
-      <div className={styles.wrapper}>
+    <div className="h-screen place-content-center grid text-white ">
+      <div className="max-w-3xl">
         <AnimatedTextCharacter
           text={"Welcome to CodeHabits!"}
           paragraph={false}
@@ -18,7 +17,7 @@ export default function Hero() {
           paragraph
         />
         <motion.div
-          className={styles.buttonWrapper}
+          className="w-fit mx-auto"
           transition={{ ease: "easeOut", duration: 1 }}
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,7 +27,7 @@ export default function Hero() {
           }}
         >
           <a href={"/quizzes"}>
-            <BtnPrimary text="Start learning for free" />
+            <BtnPrimary className="mt-8 " text="Start learning for free" />
           </a>
         </motion.div>
       </div>

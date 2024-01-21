@@ -2,7 +2,6 @@ import { AiOutlineRead } from "react-icons/ai";
 import { BsQuestionSquare } from "react-icons/bs";
 // import LogoutButton from "./LogoutButton";
 // import SignInBtn from "./SignInBtn";
-import styles from "./index.module.scss";
 
 interface Props {
   closeDrawer?: () => void;
@@ -11,15 +10,15 @@ interface Props {
 
 export default function MenuLinks(props: Props) {
   return (
-    <ul className={styles.wrapper}>
+    <ul className={`${props.className} text-white`}>
       <li>
-        <a href="/quizzes">
+        <a href="/quizzes" className="menu-link">
           <BsQuestionSquare />
           Quizzes
         </a>
       </li>
       <li>
-        <a href="/exploration">
+        <a href="/exploration" className="menu-link">
           <AiOutlineRead />
           Exploration
         </a>

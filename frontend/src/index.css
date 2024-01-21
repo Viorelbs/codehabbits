@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-link {
+    @apply flex items-center gap-2 cursor-pointer hover:text-orange-700 border-b border-white/40 py-4;
+  }
+  .progress-subtitle {
+    @apply text-sm text-center block mt-2;
+  }
+}
+
+/* Custom css */
+h1 {
+  font-size: calc(26px + (50 - 26) * ((100vw - 300px) / (2000 - 300)));
+}
+
+.custom-gradient {
+  background: #000428;
+  background: linear-gradient(to right, #021629, #000428);
+}
+
+.anchor + div {
+  height: 400vh;
+}
+
+/* Custom scrollbar  */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: red #fff;
+}
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #010829;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.CircularProgressbar.beginner .CircularProgressbar-path {
+  stroke: #30af06;
+}
+.CircularProgressbar.intermediate .CircularProgressbar-path {
+  stroke: orange;
+}
+.CircularProgressbar.advanced .CircularProgressbar-path {
+  stroke: #673ab7;
+}
+
+.CircularProgressbar text.CircularProgressbar-text {
+  fill: white;
+}
+.inputs_wrapper label {
+  padding: 0;
+  margin-right: 10px;
+  color: rgb(177, 175, 175);
+}
