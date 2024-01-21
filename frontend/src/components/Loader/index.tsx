@@ -1,18 +1,12 @@
-import styles from "./index.module.scss";
-
-interface LoaderProps {
-  /** Size value will be multiply by 10px*/
+interface Props {
   size: number;
 }
-
-export function Loader(props: Readonly<LoaderProps>) {
-  const size = `${props.size * 10}px`;
-
+function Loader(props: Props) {
   return (
-    <div className={styles.wrapper}>
+    <div>
       <svg
-        className={styles.spinner}
-        style={{ width: size, height: size }}
+        role="status"
+        className={`m-auto h-${props.size} w-${props.size} animate-spin text-gray-200 dark:text-transparent fill-[blue]`}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -29,3 +23,5 @@ export function Loader(props: Readonly<LoaderProps>) {
     </div>
   );
 }
+
+export default Loader;
