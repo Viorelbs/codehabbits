@@ -6,7 +6,7 @@ interface AnimatedTextCharacterProps {
   variant?: "regular" | "font-semibold";
 }
 export default function AnimatedTextCharacter(
-  props: AnimatedTextCharacterProps,
+  props: Readonly<AnimatedTextCharacterProps>,
 ) {
   const letters = Array.from(props.text);
   const container = {
