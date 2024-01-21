@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 interface AnimatedTextCharacterProps {
   text: string;
   paragraph: boolean;
+  variant?: "regular" | "font-semibold";
 }
 export default function AnimatedTextCharacter(
   props: AnimatedTextCharacterProps,
